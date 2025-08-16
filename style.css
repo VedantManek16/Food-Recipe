@@ -1,0 +1,72 @@
+.food {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.meal-card {
+    position: relative;
+    text-align: center;
+    width: 220px;
+}
+
+.img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid blue;
+    display: block;
+}
+
+/* Hover overlay for recipe link */
+.recipe-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    opacity: 0;
+    transform: scale(0.5); /* initial slightly smaller */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* add scale transition */
+    border-radius: 10px;
+}
+
+.meal-card:hover .recipe-link {
+    opacity: 1;
+    transform: scale(1); /* zoom to normal size */
+}
+
+
+/* Meal name */
+.meal-card h5 {
+    margin: 10px 0;
+}
+
+/* Input styles */
+input {
+    width: 25rem;
+    background-color: rgb(70, 44, 44);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); /* subtle focus effect */
+}
+
+input::placeholder {
+    color: white;
+}
